@@ -1,0 +1,12 @@
+model: inter_mesh
+
+pretrain: True
+pretrain_path: 'weights/inter_mesh/intermesh_3dpw.bin'
+
+eval_datasets_used: ['3dpw']
+eval_datasets_split: ['test']
+eval_vis_num: 0
+conf_thresh: [0.3]
+eval_batch_size: 32
+eval_num_workers: 8
+distributed_eval: True

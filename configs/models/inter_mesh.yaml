@@ -1,0 +1,37 @@
+input_size: 1288
+encoder: 'vitb'
+
+# decoder
+hidden_dim: 768
+nheads: 4
+dec_layers: 6
+dim_feedforward: 2048
+dropout: 0.0
+num_queries: 50
+transformer_activation: "relu"
+det_mask_lvl: "image"
+
+sat_cfg:
+  use_sat: True
+  share_patch_embed: False
+  preprocess_pos_embed: False
+  num_lvls: 3
+  lvl_embed: True
+  get_map_layer: 3
+  use_additional_blocks: True
+  conf_thresh: 0.3
+  scale_thresh: 0.5
+
+dn_cfg:
+  use_dn: False
+  dn_number: 10
+  tgt_embed_type: "params"
+  box_noise_scale: 0.4
+  tgt_noise_scale: 0.2
+
+hoi_cfg:
+  use_hoi: True
+  least_hoidec_layer: 0
+  use_orig_out_loss: True
+  sub_batch_size: 5000
+  upt_pretrained: "weights/ez_hoi/hico_HO_pt_uv_vitlarge.pt"

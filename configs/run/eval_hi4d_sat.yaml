@@ -1,0 +1,12 @@
+model: sat_hmr
+
+pretrain: True
+pretrain_path: 'weights/sat_hmr/sat_644_3dpw.pth'
+
+eval_datasets_used: ['hi4d']
+eval_datasets_split: ['test']
+eval_vis_num: 0
+conf_thresh: [0.3]
+eval_batch_size: 32
+eval_num_workers: 8
+distributed_eval: True

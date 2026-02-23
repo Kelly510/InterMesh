@@ -1,0 +1,11 @@
+model: inter_mesh # sat_hmr
+
+pretrain: True
+pretrain_path: 'weights/inter_mesh/intermesh_stage1.bin' # 'weights/sat_hmr/sat_644.pth'
+
+input_dir: './demo'
+output_dir: './demo_results'
+conf_thresh: [0.3]
+infer_batch_size: 1
+infer_num_workers: 1
+distributed_infer: True
